@@ -1,0 +1,17 @@
+| Component        | Technology                        |
+| ---------------- | --------------------------------- |
+| Frontend         | HTML + JavaScript + Nginx         |
+| Backend          | Python Flask                      |
+| Containerization | Docker                            |
+| Registry         | Docker Hub initially              |
+| Kubernetes       | Minikube                          |
+| Ingress          | NGINX Ingress                     |
+| Configuration    | ConfigMap                         |
+| Credentials      | Secret                            |
+| HTTPS            | cert-manager                      |
+| TLS certificate  | Let's Encrypt / local certificate |
+| Autoscaling      | HPA                               |
+| Metrics          | metrics-server                    |
+| Load testing     | `hey` or ApacheBench              |
+| Kubernetes CLI   | kubectl                           |
+
