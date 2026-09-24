@@ -1,0 +1,136 @@
+# =========================
+
+# Python
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+
+venv/
+.venv/
+env/
+ENV/
+
+# Python packaging
+
+*.egg-info/
+dist/
+build/
+
+# =========================
+
+# Node / React
+
+# =========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# React / Vite build output
+
+dist/
+build/
+
+# =========================
+
+# Environment files / Secrets
+
+# =========================
+
+.env
+.env.*
+!.env.example
+
+# Kubernetes local secrets
+
+*.secret.yaml
+*.secret.yml
+
+# Terraform state (if added later)
+
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# =========================
+
+# Docker
+
+# =========================
+
+docker-compose.override.yml
+
+# =========================
+
+# Kubernetes
+
+# =========================
+
+# Local Kubernetes configuration
+
+.kube/
+
+# Helm generated files
+
+*.tgz
+
+# =========================
+
+# IDE / Editors
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+logs/
+
+# =========================
+
+# Coverage / Testing
+
+# =========================
+
+.coverage
+coverage/
+.pytest_cache/
+htmlcov/
+
+# =========================
+
+# Temporary files
+
+# =========================
+
+*.tmp
+*.temp
+*.bak
+*~
+
