@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: production-ingress
+  namespace: production
+spec: 
+  ingressClassName: nginx
+  
+  tls:
+    - hosts: 
+        - app.local
+      secretName: app-local-tls  
+  rules:
+    - host: app.local
+  # for the http request comming to this ingress use the following path routing rules
+      http: 
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend: 
+              service:
+                name: backend-service
+                port: 
+                  number: 8000
+          - path: /
+            pathType: Prefix
+            backend: 
+              service:
+                name: frontend-service
+                port:
+                  number: 80
+

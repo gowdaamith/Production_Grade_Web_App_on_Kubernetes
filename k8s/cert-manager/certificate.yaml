@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+
+metadata: 
+  name: app-local-tls
+  namespace: production
+spec:
+  secretName: app-local-tls
+  issuerRef: 
+    name: selfsigned-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames: 
+    - app.local
