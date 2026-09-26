@@ -13,12 +13,28 @@ spec:
       labels: 
         app:  backend
     spec:
+      serviceAccountName: backend-serviceaccount
       containers:
       - name: backend
-        image: gowdaamith/k8s-backend:1.1
+        image: gowdaamith/k8s-backend:1.2
         ports:
           - containerPort: 8000
         
+        securityContext:
+          runAsNonRoot: true
+          allowPrivilegeEscalation: false
+          capabilities: 
+           drop:
+             - ALL
+
+
+        resources: 
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits: 
+            cpu: "500m"
+            memory: "265Mi"
         env: 
           - name: APP_ENV
             valueFrom: 
