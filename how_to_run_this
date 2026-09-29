@@ -25,10 +25,11 @@ helm install cert-manager jetstack/cert-manager \
   >> kubectl get namespace production
 
 7.create the secret
-  >> kubectl create secret generic backend-secret \
-     --namespace production
-     --from-literal=DB_USERNAME=appuser \
-     --from-literal=DB_PASSWORD=change-me 
+  >> 
+kubectl create secret generic backend-secret \
+  --namespace production \
+  --from-literal=DB_USERNAME=appuser \
+  --from-literal=DB_PASSWORD=change-me
 
 8.Deploy every file 
 9.map the app.local to the minikube ip and add it to the /etc/hosts
