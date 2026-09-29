@@ -1,6 +1,6 @@
 FROM python:3.14-slim 
-RUN groupadd --system appgroup && \
-    useradd --system --gid appgroup appuser
+RUN groupadd --system --gid 10001 appgroup && \
+    useradd --system --uid 10001 --gid 10001 appuser
 
 WORKDIR /app
 COPY requirements.txt ./
